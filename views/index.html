@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<body>
+<h1>Node Blog</h1>
+
+
+<% for(let i = 0; i < posts.length; i++) { %>
+<article>
+    <p><%= posts[i].body %></p>
+    <p><%= posts[i].title %></p>
+    <p><%= posts[i].date %></p>
+</article>
+<% } %>
+
+<form action="addpost" method="post">
+    <label for="title-post">Title</label>
+    <input id="title-post" name="title" type="text">
+    
+    <label for="body-post">Post</label>
+    <textarea id="body-post" name="body"></textarea>
+    <input type="submit" value="Add Post" />
+</form>
+
+</body>
+
+
+</html>
